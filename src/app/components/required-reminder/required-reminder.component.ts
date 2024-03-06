@@ -10,9 +10,9 @@ import { ApiRequestService } from 'src/app/services/api-request.service';
 export class RequiredReminderComponent {
   resultado: any;
   formReminder = this.formBuilder.group({
-    xvalue: '',
-    yvalue: '',
-    nvalue: '',
+    xvalue: '' || 0,
+    yvalue: '' || 0,
+    nvalue: '' || 0,
   });
 
   constructor(
@@ -23,13 +23,12 @@ export class RequiredReminderComponent {
   submit() {
     this.apirequest
       .getReminders(
-        this.formReminder.value.xvalue,
-        this.formReminder.value.yvalue,
-        this.formReminder.value.nvalue
+        this.formReminder.value.xvalue ?? 0,
+        this.formReminder.value.yvalue ?? 0,
+        this.formReminder.value.nvalue ?? 0
       )
       .subscribe((data: any) => {
         this.resultado = data.result;
-        console.log('Data from the server : ', data);
       });
   }
 }
