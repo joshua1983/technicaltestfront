@@ -1,11 +1,11 @@
-# Technicaltestfront
+# Prueba tecnica de front con Angular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.5.
+Este proyecto ha sido generado con [Angular CLI](https://github.com/angular/angular-cli) version 13.3.5.
 
-## Development server
+## Frontend server
 
-Run `npm install` to install the dependencies of the project.
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/reminder`. The application will automatically reload if you change any of the source files.
+Ejecute `npm install` para instalar las dependencias del proyecto.
+Ejecute `ng serve` para arrancar el servidor local. Navegue a `http://localhost:4200/reminder` para ver la pagina.
 
 ## Backend server
 
