@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root',
@@ -10,12 +10,12 @@ export class ApiRequestService {
   constructor(private http: HttpClient) {}
 
   getReminders(x: number, y: number, n: number) {
+    const params = new HttpParams()
+      .append('x', x.toString())
+      .append('y', y.toString())
+      .append('n', n.toString());
     return this.http.get(this.backendUrl, {
-      params: {
-        x,
-        y,
-        n,
-      },
+      params,
     });
   }
 }
